@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <title>Vihaan</title>
+</head>
+<body>
+    <p>registration will start in</p>
+    <p id="demo">
+        
+    </p>
+    <header id="header">
+       
+        <nav>
+            <div class="logo">
+                <img src="images/vya.jpg" alt="">
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="https://www.vyakochi.in">Register</a>
+                </li>
+                <li>
+                    <a href="#">Rules and Regulations</a>
+                </li>
+                <li>
+                    <a href="#">Results</a>
+                </li>
+                <li>
+                    <a href="#">contact </a>
+                </li>
+
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <section class="welcome">
+        <h1 id="vihaan">VIHAAN'21</h1>
+    </section>
+
+    <script src="app.js"></script>
+    
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Sep 30, 2021 23:59:59").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = days + "days " + hours + "hours "
+      + minutes + "minutes " + seconds + "s ";
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").style.display = "none";
+      }
+    }, 1000);
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</body>
+</html>
